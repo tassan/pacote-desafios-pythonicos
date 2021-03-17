@@ -15,7 +15,14 @@ onde todas as instancias de stra foram substituidas por strb.
 
 def fix_start(s):
     # +++ SUA SOLUÇÃO +++
-    return
+    firstChar = s[0]
+    letters = [c for c in s]
+    fixed = ""
+    for i in range(len(s)):
+        if letters[i] == s[0] and i != 0:
+            letters[i] = '*'
+        fixed += letters[i]
+    return fixed
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
