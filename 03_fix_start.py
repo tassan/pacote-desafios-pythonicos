@@ -15,10 +15,7 @@ onde todas as instancias de stra foram substituidas por strb.
 
 def fix_start(s):
     # +++ SUA SOLUÇÃO +++
-    letters = [c for c in s]
-    result = ''.join(['*' if letters[i] == s[0] and i != 0 else letters[i] for i in range(len(s))])
-
-    return result
+    return s[0]+''.join(['*' if i == s[0] and s.index(i) == 0 else i for i in s[1:]])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
