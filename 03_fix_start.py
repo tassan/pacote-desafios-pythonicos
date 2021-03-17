@@ -15,7 +15,7 @@ onde todas as instancias de stra foram substituidas por strb.
 
 def fix_start(s):
     # +++ SUA SOLUÇÃO +++
-    return s[0]+''.join(['*' if i == s[0] and s.index(i) == 0 else i for i in s[1:]])
+    return ''.join((s[0], *('*' if c == s[0] else c for c in s[1:])))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
