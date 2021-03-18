@@ -12,7 +12,17 @@ Retorne o resultado da string.
 
 def verbing(s):
     # +++ SUA SOLUÇÃO +++
-    return
+    ing = 'ing'
+    final_letters = s[-3:]
+    verbing_word = s
+    if len(s) >= 3:
+        if final_letters == ing:
+            verbing_word = s+ 'ly'
+        else:
+            verbing_word = s + ing
+
+        
+    return verbing_word
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
