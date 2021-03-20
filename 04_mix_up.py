@@ -12,12 +12,14 @@ Exemplo:
 Assuma que a e b tem tamanho 2 ou maior.
 """
 
+
 def mix_up(a, b):
     # +++ SUA SOLUÇÃO +++
-    return ' '.join([a.replace(a[:2], b[:2]), b.replace(b[:2], a[:2])])
+    return " ".join([a.replace(a[:2], b[:2]), b.replace(b[:2], a[:2])])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -27,19 +29,19 @@ def test(f, in_, expected):
     out = f(*in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}{in_!r} retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}{in_!r} retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(mix_up, ('mix', 'pod'), 'pox mid')
-    test(mix_up, ('dog', 'dinner'), 'dig donner')
-    test(mix_up, ('gnash', 'sport'), 'spash gnort')
-    test(mix_up, ('pezzy', 'firm'), 'fizzy perm')
-    test(mix_up, ('o', 'a'), 'a o')
+    test(mix_up, ("mix", "pod"), "pox mid")
+    test(mix_up, ("dog", "dinner"), "dig donner")
+    test(mix_up, ("gnash", "sport"), "spash gnort")
+    test(mix_up, ("pezzy", "firm"), "fizzy perm")
+    test(mix_up, ("o", "a"), "a o")

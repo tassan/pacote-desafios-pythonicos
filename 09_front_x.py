@@ -11,12 +11,14 @@ Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
 
+
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
     return
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -26,20 +28,29 @@ def test(f, in_, expected):
     out = f(in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}({in_!r}) retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(front_x, ['bbb', 'ccc', 'axx', 'xzz', 'xaa'],
-         ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
-    test(front_x, ['ccc', 'bbb', 'aaa', 'xcc', 'xaa'],
-         ['xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
-    test(front_x, ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'],
-         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
+    test(
+        front_x,
+        ["bbb", "ccc", "axx", "xzz", "xaa"],
+        ["xaa", "xzz", "axx", "bbb", "ccc"],
+    )
+    test(
+        front_x,
+        ["ccc", "bbb", "aaa", "xcc", "xaa"],
+        ["xaa", "xcc", "aaa", "bbb", "ccc"],
+    )
+    test(
+        front_x,
+        ["mix", "xyz", "apple", "xanadu", "aardvark"],
+        ["xanadu", "xyz", "aardvark", "apple", "mix"],
+    )

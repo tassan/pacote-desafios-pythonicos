@@ -9,12 +9,15 @@ Irá retornar: [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 
 Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 """
+
+
 def sort_last(tuples):
     # +++ SUA SOLUÇÃO +++
     return
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -24,20 +27,21 @@ def test(f, in_, expected):
     out = f(in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}({in_!r}) retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(sort_last, [(1, 3), (3, 2), (2, 1)],
-         [(2, 1), (3, 2), (1, 3)])
-    test(sort_last, [(2, 3), (1, 2), (3, 1)],
-         [(3, 1), (1, 2), (2, 3)])
-    test(sort_last, [(1, 7), (1, 3), (3, 4, 5), (2, 2)],
-         [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
+    test(sort_last, [(1, 3), (3, 2), (2, 1)], [(2, 1), (3, 2), (1, 3)])
+    test(sort_last, [(2, 3), (1, 2), (3, 1)], [(3, 1), (1, 2), (2, 3)])
+    test(
+        sort_last,
+        [(1, 7), (1, 3), (3, 4, 5), (2, 2)],
+        [(2, 2), (1, 3), (3, 4, 5), (1, 7)],
+    )

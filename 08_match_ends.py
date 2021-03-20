@@ -8,12 +8,14 @@ e o último caracteres da cadeia são os mesmos.
 PS: Python não possui o operador ++, porém += funciona.
 """
 
+
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
     return
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -23,17 +25,17 @@ def test(f, in_, expected):
     out = f(in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}({in_!r}) retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(match_ends, ['aba', 'xyz', 'aa', 'x', 'bbb'], 3)
-    test(match_ends, ['', 'x', 'xy', 'xyx', 'xx'], 2)
-    test(match_ends, ['aaa', 'be', 'abc', 'hello'], 1)
+    test(match_ends, ["aba", "xyz", "aa", "x", "bbb"], 3)
+    test(match_ends, ["", "x", "xy", "xyx", "xx"], 2)
+    test(match_ends, ["aaa", "be", "abc", "hello"], 1)

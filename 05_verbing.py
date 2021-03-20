@@ -10,12 +10,14 @@ Se o tamanho da string for menor que 3, não altere nada.
 Retorne o resultado da string.
 """
 
+
 def verbing(s):
-    # +++ SUA SOLUÇÃO +++       
-    return ''.join((s, *('ly' if s[-3:] == 'ing' else 'ing' if len(s) >= 3 else '')))
+    # +++ SUA SOLUÇÃO +++
+    return "".join((s, *("ly" if s[-3:] == "ing" else "ing" if len(s) >= 3 else "")))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -25,17 +27,17 @@ def test(f, in_, expected):
     out = f(in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}({in_!r}) retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(verbing, 'hail', 'hailing')
-    test(verbing, 'swiming', 'swimingly')
-    test(verbing, 'do', 'do')
+    test(verbing, "hail", "hailing")
+    test(verbing, "swiming", "swimingly")
+    test(verbing, "do", "do")

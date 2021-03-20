@@ -9,12 +9,14 @@ por 'good' e retorne a string resultante.
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
 
+
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
     return
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -24,18 +26,18 @@ def test(f, in_, expected):
     out = f(in_)
 
     if out == expected:
-        sign = '✅'
-        info = ''
+        sign = "✅"
+        info = ""
     else:
-        sign = '❌'
-        info = f'e o correto é {expected!r}'
+        sign = "❌"
+        info = f"e o correto é {expected!r}"
 
-    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+    print(f"{sign} {f.__name__}({in_!r}) retornou {out!r} {info}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(not_bad, 'This movie is not so bad', 'This movie is good')
-    test(not_bad, 'This dinner is not that bad!', 'This dinner is good!')
-    test(not_bad, 'This tea is not hot', 'This tea is not hot')
+    test(not_bad, "This movie is not so bad", "This movie is good")
+    test(not_bad, "This dinner is not that bad!", "This dinner is good!")
+    test(not_bad, "This tea is not hot", "This tea is not hot")
     test(not_bad, "It's bad yet not", "It's bad yet not")
